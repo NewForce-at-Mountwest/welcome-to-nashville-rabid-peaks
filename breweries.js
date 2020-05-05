@@ -8,7 +8,7 @@ function breweriesSearch(searchName) {
             parsedBreweriesArray.forEach(brewery => {
                 console.log(brewery);
 // Prints the name of the brewery to the resultsContainer and populates a save button
-                document.querySelector("#resultsContainer").innerHTML += `<h3>${brewery.name}</h3> <button>Save</button>
+                document.querySelector("#resultsContainer").innerHTML += `<li>${brewery.name}</li> <button>Save</button>
                 `
 
 
@@ -29,6 +29,8 @@ function breweriesSearch(searchName) {
 document.querySelector("#breweryBtn").addEventListener("click", function () {
 // This variable represents whatever the user inputs into the Brewery search field
     const breweryValue = document.querySelector("#brewerySearch").value
+// This clears the resultsContainer after searching again
+    document.querySelector("#resultsContainer").innerHTML = ` `
   
 // If there is a value in the search container, run the breweriesSearch function to try to match the search to the name of a brewery and clear the field
     if (breweryValue != "") {
