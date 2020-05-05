@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+}
+
+#searchContainer{
+    display: flex-box;
+    margin-left: 10em;
+    width: 33vw;
+    justify-content: space-evenly;
+   
+}
